@@ -1,0 +1,8 @@
+Compilar classe, criando o .h
+javac -h . OlaJNI.java
+
+Compilar dll em C:
+gcc -shared -o ola.dll -I"C:\Program Files\Java\jdk-25\include" -I"C:\Program Files\Java\jdk-25\include\win32" OlaJNI.c
+
+Executar classe:
+java --enable-native-access=ALL-UNNAMED OlaJNI -Djava.library.path=.
